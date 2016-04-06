@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/vendor/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+	<script type="text/javascript" src="site/controllers/ChessControl.ctrl.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body ng-app="app" ng-controller="ChessController as ctrl">
+
+	<div class="container">
+
+		<div class="jumbotron text-center" >
+			<div class="chess">
+				<button ng-click="ctrl.go()">PLAY!</button><span>Moves Made: {{ctrl.count}}</span>
+
+				<div ng-repeat="num in ctrl.test" ng-class="ctrl.assign($index)">
+
+				</div>
+
+				<div ng-repeat="(pIndex,item) in ctrl.rows" class="row" >
+					<div ng-class="ctrl.assignClass(pIndex,$index)" ng-repeat="element in ctrl.arrayRow(pIndex) track by $index">
+						<div ng-class="ctrl.hasQueen(element)">
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
