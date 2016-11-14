@@ -3,3 +3,6 @@ My solution using recursion to the N-Queens problem, details of the problem here
 
 The basic premise: Place n queens on an n*n chessboard in a way that none are checking each other. Default n=8, set it in app.js.
 I used Angular for the UI.
+
+##Install
+Clone repo, run http-server in root dir.
